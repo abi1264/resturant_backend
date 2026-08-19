@@ -14,7 +14,7 @@ export class UserService {
   }
 
   getUserById(id: number) {
-    this.repoService.getUserById;
+    return this.repoService.getUserById(id);
   }
 
   async createUser(body: CreateUserDto) {
