@@ -1,5 +1,5 @@
 import { Controller, Get, HttpCode, HttpStatus } from '@nestjs/common';
-import { HealthCheckService } from './health_check.service';
+import { HealthCheckService } from './healthCheck.service';
 
 @Controller('health-check')
 export class HealthCheckController {

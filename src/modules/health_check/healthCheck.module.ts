@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { HealthCheckController } from './health_check.controller';
-import { HealthCheckService } from './health_check.service';
+import { HealthCheckController } from './healthCheck.controller';
+import { HealthCheckService } from './healthCheck.service';
 
 @Module({
   imports: [],

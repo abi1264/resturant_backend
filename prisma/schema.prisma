@@ -13,8 +13,29 @@ datasource db {
   provider = "postgresql"
 }
 
-model User{
+model Health{
   id Int @default(autoincrement()) @id
-  email String @unique
-  name String? @map("user_name")
+  name String @unique
+  info String? @map("health info")
+}
+
+model User {
+  id                     Int       @id @default(autoincrement())
+  name                    String    @map("username")
+  email                   String
+  role                    Role @default(CUSTOMER)
+  passwordHash            String
+  phoneNo                 String?
+  passwordResetToken      String?
+  passwordResetExpiry     DateTime?
+  verificationToken       String?
+  verificationTokenExpiry DateTime?
+  createdAt              DateTime  @default(now())
+  updatedAt              DateTime  @updatedAt
+  isVerified             Boolean   @default(false)
+}
+
+enum Role{
+ ADMIN
+ CUSTOMER
 }
